@@ -1,0 +1,151 @@
+﻿body {
+    background-color: #ffffdf;
+    border-top: solid 10px #000;
+    color: #333;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+div.content {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.alert-box {
+    background-color: #002020;
+    color: #ddddbd;
+}
+
+    .alert-box .close {
+        color: #ddddbd;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+}
+
+.title h1 {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+    background: #888868;
+}
+
+    .top-bar-section li.active:not(.has-form) a:not(.button):hover {
+        background: #666646;
+    }
+
+.breadcrumbs {
+    background-color: #bbbb9b;
+}
+
+    .breadcrumbs > * a {
+        color: #222222;
+    }
+
+table {
+    table-layout: auto;
+    width: 100%;
+}
+
+    table tr.odd, table tr.alt, table tr:nth-of-type(odd) {
+        background: #eeeece;
+    }
+
+    table tr.even, table tr.alt, table tr:nth-of-type(even) {
+        background: #ddddbd;
+    }
+
+img.no-max-width {
+    max-width: none;
+}
+
+.ui-menu {
+    width: 50%;
+    border: 1px solid silver;
+}
+
+    .ui-menu .ui-menu-item {
+        background: white;
+        display: block;
+        padding-left: 5px;
+    }
+
+
+        .ui-menu .ui-menu-item:hover {
+            background: silver;
+        }
+
+button, .button {
+    background: #888868;
+}
+
+    button:hover, .button:hover {
+        background: #666646;
+    }
+
+    .button.tiny {
+        margin-bottom: 0px;
+    }
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #888868;
+    border-color: #888868;
+    color: black;
+    font-weight: bold;
+}
+
+book {
+    font-style: italic;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+label > div {
+    font-family: serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+table.responsive {
+    width: 100%;
+}
+
+img.logo-image {
+    padding-bottom: 0.25em;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#google-login {
+    background: #4285f4;
+    color: white;
+}
+
+.heading {
+    font-weight: bold;
+    min-width: 25%;
+    font-size: 1.25em;
+    display: inline-block;
+}
+
+article {
+    margin-bottom: 2em;
+}
+
+.detail-image {
+    float: right;
+    padding: 2%;
+    border: 1px solid black;
+    background-color: #bbbb9b;
+}
