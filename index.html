@@ -1,7 +1,155 @@
-<html>
-  <head><title>WhatCharacter.com</title></head>
-  <body>
-    <h1>WhatCharacter.com</h1>
-    <div>coming soon!</div>
-  </body>
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WhatCharacter.com</title>
+    <link rel="icon" href="/Images/icon.png" type="image/png" />
+
+    <link href="/Content/foundation/foundation.css" rel="stylesheet"/>
+<link href="/Content/foundation/foundation.mvc.css" rel="stylesheet"/>
+
+    <link href="/Content/PagedList.css" rel="stylesheet"/>
+
+    <link href="/Content/Site.css" rel="stylesheet"/>
+
+    <link href="/Content/font-awesome.min.css" rel="stylesheet"/>
+
+
+
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
+
+    <script src="/Scripts/jquery-2.1.4.js"></script>
+
+</head>
+<body>
+    <div class="fixed">
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1>
+                        <a href="/">
+                            <img src="/Images/icon.png" class="logo-image" /> <strong>WhatCharacter</strong>
+                        </a>
+                    </h1>
+                </li>
+
+                <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+                <ul class="left">
+                </ul>
+
+                <ul class="right">
+                </ul>
+            </section>
+        </nav>
+    </div>
+
+    <div class="row content">
+
+
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>WhatCharacter</h1>
+                <div data-alert class="alert-box">
+                    Coming Soon!
+                    <a href="#" class="close"><i class="fa fa-fw fa-times"></i></a>
+                </div>
+            </hgroup>
+        </div>
+    </section>
+
+
+
+
+    </div>
+
+    <div class="row">
+        <div class="columns small-12 text-center">
+            <a href="http://blog.whatcharacter.com">Blog</a>
+        </div>
+    </div>
+
+    <p class="small-text-center"><small>&copy; 2015 - <a href="mailto:jacob@whatcharacter.com">Jacob P. Silvia</a>. Software version 0.0.5701.23366</small></p>
+
+
+    <script src="/Scripts/foundation/fastclick.js"></script>
+<script src="/Scripts/foundation/foundation.js"></script>
+<script src="/Scripts/foundation/foundation.abide.js"></script>
+<script src="/Scripts/foundation/foundation.accordion.js"></script>
+<script src="/Scripts/foundation/foundation.alert.js"></script>
+<script src="/Scripts/foundation/foundation.clearing.js"></script>
+<script src="/Scripts/foundation/foundation.dropdown.js"></script>
+<script src="/Scripts/foundation/foundation.equalizer.js"></script>
+<script src="/Scripts/foundation/foundation.interchange.js"></script>
+<script src="/Scripts/foundation/foundation.joyride.js"></script>
+<script src="/Scripts/foundation/foundation.magellan.js"></script>
+<script src="/Scripts/foundation/foundation.offcanvas.js"></script>
+<script src="/Scripts/foundation/foundation.orbit.js"></script>
+<script src="/Scripts/foundation/foundation.reveal.js"></script>
+<script src="/Scripts/foundation/foundation.slider.js"></script>
+<script src="/Scripts/foundation/foundation.tab.js"></script>
+<script src="/Scripts/foundation/foundation.tooltip.js"></script>
+<script src="/Scripts/foundation/foundation.topbar.js"></script>
+
+    <script>
+        $(document).foundation();
+
+        $(function () {
+            $(".submit").click(function () {
+                $("form").submit();
+            });
+
+            AddAutocompleteFor("Place");
+            AddAutocompleteFor("Character");
+            AddAutocompleteFor("Work");
+            AddAutocompleteFor("Format");
+            AddAutocompleteFor("Language");
+            AddAutocompleteFor("Role");
+        });
+
+        function AddAutocompleteFor(type) {
+            var selector = ".efmodel-" + type;
+
+            $(selector).each(function (i, e) {
+                var id = e.id;
+                var newId = id.replace("_Name", "Id");
+
+                $(e).autocomplete({
+                    source: "/" + type + "/AutoComplete",
+                    minLength: 1,
+                    select: function (event, ui) {
+                        $("#" + newId).val(ui.item.Id);
+                    },
+                    create: function (event, ui) {
+                    },
+                    change: function (event, ui) {
+                        if (!ui) {
+                            $("#" + newId).val("");
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Chrome","requestId":"47f07baed48a4122a43d0932f130adf7"}
+</script>
+<script type="text/javascript" src="http://localhost:49561/f823b9c010ca47c79ee71e09f1f5be92/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
 </html>
